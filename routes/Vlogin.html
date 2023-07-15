@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <title>
+     online voting system-login   
+    </title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>   
+<style>
+    input {
+  padding: 10px;
+  border-radius: 5px;
+}
+select {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#headerSection{
+	background-color:#130f40;
+	padding: 2px;
+	font-family: Cursive;
+	color:white;
+}
+#loginSection {
+  padding: 5px;
+  background-image: url('../img/college.jpeg');
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+body{
+  background-color: blanchedalmond;
+}
+
+
+</style>
+</head>
+<body>
+<center>
+    <div id="headerSection" class="col-sm-12" >
+    <h1>Online Voting System</h1>  
+    <hr>
+    </div>
+    <marquee style="color:red; font-size: 15px;">Voting Is The Representation Of Our Commitment To Ourselves Each Other,This Nation And This World</marquee>
+
+    <div id="loginSection" class="col-sm-12">
+        <b><h2 style="color:black">Login</h2><b>
+        <form action="../api/login.php" method="POST">
+            <input type="number" name="adhar" placeholder="Enter AdharNo" required><br><br>
+            <input type="password" name="pass" placeholder="Enter Password" required><br><br>
+            <select name="role" style="width: 15%; border: 2px solid black">
+                <option value="1">Voter</option>
+                <option value="2">Group</option>
+            </select><br><br>                  
+            <button id="loginbtn" type="submit" name="loginbtn" style="padding: 5px;font-size: 15px;background-color: #130f40;color: white;border-radius: 5px;">Login</button><br><br>
+           <b style="color:red"> New user?</b> <a href="https://docs.google.com/forms/d/e/1FAIpQLSfLEFmxaRpkqiBIbErLJDXJ7-WjmnuOQG0FDKHeu2Odjn7woA/viewform" style="color:#130f40">Register here</a>
+        </form>
+    </div>
+
+    </center> 
+</body>
+</html>

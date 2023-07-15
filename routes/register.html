@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Online voting system - Registratrion</title>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<style>
+		body {
+  background-image: url('../img/PC.webp');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+input {
+  padding: 10px;
+  border-radius: 5px;
+}
+select {
+  padding: 10px;
+  border-radius: 5px;
+}
+#headerSection{
+	background-color:#130f40;
+	padding: 2px;
+	font-family: Cursive;
+	color:white;
+}
+#reglink {
+  padding: 5px;
+  font-size: 15px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+#upload {
+  padding: 7px;
+  border-radius: 5px;
+  border: 2px solid black;
+  background-color:white;
+}
+#loginbtn {
+  padding: 5px;
+  font-size: 15px;
+  background-color: #130f40;
+  color: white;
+  border-radius: 5px;
+}
+
+
+		</style>
+    </head>
+    <body>
+        <center>
+            <div id="headerSection">
+            <h1>Online Voting System</h1>  
+             <hr>
+			</div>
+           
+
+            <h2>Registration</h2>
+                <form action="../api/register.php" method="POST" enctype="multipart/form-data">
+                    <input type="text" name="name" placeholder="Name" required>&nbsp
+                    <input type="number" name="adhar" placeholder="Adhar No" required><br><br>
+                    <input type="password" name="pass" placeholder="Password" required>&nbsp
+                    <input type="password" name="cpass" placeholder="Confirm Password" required><br><br>
+                    <input style="width: 31%" type="text" name="add" placeholder="Address" required><br><br>
+                    <div id="upload" style="width: 30%">
+                    <b>Upload image:</b> <input type="file" id="profile" name="image" required>
+                    </div><br>
+                    <div id="upload" style="width: 30%">
+                        <b>Select your role:</b>
+                        <select name="role">
+                            <option value="1">Voter</option>
+                            <option value="2">Group</option>
+                        </select><br>                   
+                    </div><br>
+                    <button id="loginbtn" type="submit" name="registerbtn">Register</button><br><br>
+                   <b style="color:red"> Already user?</b> <a href="../" style="color:#27ae60">Login here</a>
+                </form>
+            </center>
+    </body>
+</html>
